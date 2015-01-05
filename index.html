@@ -1,0 +1,240 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Animation - RebootFactory</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="author" href="humans.txt">
+    </head>
+    <body>
+
+
+        <section class="anim--1">
+            <h1>Bibliothèque d'animations</h1>
+
+            <p>Les 3 écrans qui suivent présentent une navigation de page en page. Pour les besoins de notre application, cette navigation passe obligatoirement par le menu.</p>
+            <div class="main main--1">
+    
+                <nav class="menu menu--1">
+                    <ul>
+                        <li class="lien bleu lien--1" id="bleu1"></li><!--
+                        --><li class="lien rouge lien--1" id="rouge1"></li>
+                        <li class="lien jaune lien--1" id="jaune1"></li>
+                    </ul>
+                </nav>
+                <div class="page page--bleu page--1 page--bleu--1 active--1 zindex--1">
+                        <img class="burger burger--1" src="img/burger.png"></img>
+                </div>
+                <div class="page page--rouge page--1 page--rouge--1">
+                    <img class="burger burger--1" src="img/burger.png"></img>
+                </div>
+                <div class="page page--jaune page--1 page--jaune--1">
+                    <img class="burger burger--1" src="img/burger.png"></img>
+                </div>
+            </div>
+        </section>
+
+        <section class="anim--2">
+            <div class="main main--2">
+    
+                <nav class="menu menu--2">
+                    <ul>
+                        <li class="lien bleu lien--2" id="bleu2"></li><!--
+                        --><li class="lien rouge lien--2" id="rouge2"></li>
+                        <li class="lien jaune lien--2" id="jaune2"></li>
+                    </ul>
+                </nav>
+                <div class="page page--bleu page--2 page--bleu--2 active--2 zindex--2">
+                        <img class="burger burger--2" src="img/burger.png"></img>
+                </div>
+                <div class="page page--rouge page--2 page--rouge--2">
+                    <img class="burger burger--2" src="img/burger.png"></img>
+                </div>
+                <div class="page page--jaune page--2 page--jaune--2">
+                    <img class="burger burger--2" src="img/burger.png"></img>
+                </div>
+            </div>
+        </section>
+
+        <section class="anim--3">
+            <div class="main main--3">
+    
+                <nav class="menu menu--3">
+                    <ul>
+                        <li class="lien bleu lien--3" id="bleu3"></li><!--
+                        --><li class="lien rouge lien--3" id="rouge3"></li>
+                        <li class="lien jaune lien--3" id="jaune3"></li>
+                    </ul>
+                </nav>
+                <div class="page page--bleu page--3 page--bleu--3 active--3 zindex--3">
+                        <img class="burger burger--3" src="img/burger.png"></img>
+                </div>
+                <div class="page page--rouge page--3 page--rouge--3">
+                    <img class="burger burger--3" src="img/burger.png"></img>
+                </div>
+                <div class="page page--jaune page--3 page--jaune--3">
+                    <img class="burger burger--3" src="img/burger.png"></img>
+                </div>
+            </div>
+        </section>
+        <section class="anim--4">
+            <p>L'écran suivant regroupe 2 animations possibles lorsque qu'on appuierait sur le bouton "ajouter au favoris", représenté par une étoile.</p>
+                <div class="main main--4">
+                    <div class="container--img container--img--1">
+                        <img src="img/plein@2x.png" alt="" id="plein--1">
+                        <img src="img/vide@2x.png" alt="" id="vide--1">
+                    </div>
+    
+                <div class="container--img container--img--2">
+                    <img src="img/plein@2x.png" alt="" id="plein--2"  class="plein--2 etoile--active--2">
+                    <img src="img/vide@2x.png" alt="" id="vide--2" class="vide--2">
+                </div>
+            </div>
+        </section>
+
+
+
+        <script src="jquery.js"></script>
+        <script>
+
+        // Animation 1
+
+        var burger1 = $('.burger--1'),
+            liens1 = $('.lien--1'),
+            pages1 = $('.page--1'),
+
+            page1Bleu = $('.page--bleu--1'),
+            page1Rouge = $('.page--rouge--1'),
+            page1Jaune = $('.page--jaune--1'),
+
+            lien1Bleu = $('#bleu1'),
+            lien1Rouge = $('#rouge1'),
+            lien1Jaune = $('#jaune1'),
+
+            menu1 = $('.menu--1');
+
+            burger1.on("click", function(){
+                // menu1.addClass("open--1");
+                pages1.removeClass("active--1");
+            })
+            liens1.on("click", function(){
+                // menu1.removeClass("open--1");
+                pages1.removeClass("zindex--1");
+            })
+            lien1Bleu.on("click", function(){
+                page1Bleu.addClass("active--1 zindex--1");
+            })
+            lien1Rouge.on("click", function(){
+                page1Rouge.addClass("active--1 zindex--1");
+            })
+            lien1Jaune.on("click", function(){
+                page1Jaune.addClass("active--1 zindex--1");
+            })
+
+
+        var burger2 = $('.burger--2'),
+            liens2 = $('.lien--2'),
+            pages2 = $('.page--2'),
+
+            page2Bleu = $('.page--bleu--2'),
+            page2Rouge = $('.page--rouge--2'),
+            page2Jaune = $('.page--jaune--2'),
+
+            lien2Bleu = $('#bleu2'),
+            lien2Rouge = $('#rouge2'),
+            lien2Jaune = $('#jaune2'),
+
+            menu2 = $('.menu--2');
+
+            burger2.on("click", function(){
+                menu2.addClass("open--2");
+                pages2.removeClass("active--2");
+            })
+            liens2.on("click", function(){
+                menu2.removeClass("open--2");
+                pages2.removeClass("zindex--2");
+            })
+            lien2Bleu.on("click", function(){
+                page2Bleu.addClass("zindex--2");
+                setTimeout(function(){page2Bleu.addClass("active--2");},20);
+            })
+            lien2Rouge.on("click", function(){
+                page2Rouge.addClass("zindex--2");
+                setTimeout(function(){page2Rouge.addClass("active--2");},20);
+            })
+            lien2Jaune.on("click", function(){
+                page2Jaune.addClass("zindex--2");
+                setTimeout(function(){page2Jaune.addClass("active--2");},20);
+            })
+
+        var burger3 = $('.burger--3'),
+            liens3 = $('.lien--3'),
+            pages3 = $('.page--3'),
+
+            page3Bleu = $('.page--bleu--3'),
+            page3Rouge = $('.page--rouge--3'),
+            page3Jaune = $('.page--jaune--3'),
+
+            lien3Bleu = $('#bleu3'),
+            lien3Rouge = $('#rouge3'),
+            lien3Jaune = $('#jaune3'),
+
+            menu3 = $('.menu--3');
+
+            burger3.on("click", function(){
+                pages3.removeClass("active--3");
+                setTimeout(function(){menu3.addClass("open--3");},200);
+            })
+            liens3.on("click", function(){
+                menu3.removeClass("open--3");
+                pages3.removeClass("zindex--3");
+            })
+            lien3Bleu.on("click", function(){
+                setTimeout(function(){page3Bleu.addClass("active--3 zindex--3");},200);
+            })
+            lien3Rouge.on("click", function(){
+                setTimeout(function(){page3Rouge.addClass("active--3 zindex--3");},200);
+            })
+            lien3Jaune.on("click", function(){
+                setTimeout(function(){page3Jaune.addClass("active--3 zindex--3");},200);
+            })
+
+
+            var container1 = $('.container--img--1'),
+            container2 = $('.container--img--2'),
+
+            etoileVide1 = $('#vide--1'),
+            etoilePlein1 = $('#plein--1'),
+
+            etoileVide2 = $('#vide--2'),
+            etoilePlein2 = $('#plein--2');
+
+            container1.on("click", function(){
+                etoileVide1.toggleClass("vide--active--1");
+                etoilePlein1.toggleClass("plein--active--1");
+            })
+
+            container2.on("click", function(){
+                etoileVide2.toggleClass("etoile--active--2");
+                etoilePlein2.toggleClass("etoile--active--2");
+            })
+
+            
+
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

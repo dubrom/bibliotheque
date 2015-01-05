@@ -1,0 +1,177 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+h1{
+	text-align: center;
+	font-family: sans-serif;
+	margin: 60px 0px;
+}
+p{
+	width: 500px;
+	font-family: sans-serif;
+	margin: 0 auto;
+	margin-bottom: 40px;
+}
+section{
+	position: relative;
+	padding: 40px 0px;
+}
+.main, .page{
+	width: 375px;
+	height: 667px;
+}
+.main{
+	position: relative;
+	background: #fff;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.burger{
+	position: absolute;
+	right: 0;
+	cursor: pointer;
+}
+
+.menu, menu.ul{
+	width: 355px;
+	height: 667px;
+}
+.menu{
+	position: absolute;
+	z-index: 1000;
+	background: #E5E5E5;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.menu ul{
+	list-style-type: none;
+	padding-top: 20px;
+}
+.menu li{
+	display: block;
+	width: 355px;
+	height: 40px;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+.menu ul li.bleu, .page--bleu{background: #4D69F9;}
+.menu ul li.rouge, .page--rouge{background: #F75C3E;}
+.menu ul li.jaune, .page--jaune{background: #FFEB0D;}
+
+.page{
+	position: absolute;
+	top: 0;
+	-webkit-transform-origin: center center;
+}
+
+
+
+/* Animation 1 */
+
+.menu--1{
+	z-index: 0;
+}
+.page--1{
+	-webkit-transition: -webkit-transform .2s ease-out;
+	-webkit-transform: translateX(375px);
+}
+
+.active--1{
+	-webkit-transform: translateX(0px);
+}
+.zindex--1{
+	z-index: 10;
+}
+
+/* Animation 2 */
+.menu--2{
+	-webkit-transition: -webkit-transform .2s ease-out;
+	-webkit-transform: translateX(-385px);
+}
+.page--2{
+	display: none;
+	-webkit-transition: all .2s linear;
+	-webkit-transform: scale(.90);
+}
+
+.open--2{
+	-webkit-transform: translateX(0px);
+}
+.active--2{
+	display: block;
+	-webkit-transform: scale(1);
+}
+.zindex--2{
+	display: block;
+}
+
+/* Animation 3 */
+.menu--3{
+	-webkit-transition: all .2s ease-out;
+	-webkit-transform: rotateY(-90deg) scale(.9);
+}
+.page--3{
+	-webkit-transition: -webkit-transform .2s linear;
+	-webkit-transform: rotateY(90deg) scale(.9);
+}
+.open--3{
+	-webkit-transform: rotateY(0deg) scale(1);
+}
+.active--3{
+	-webkit-transform: rotateY(0deg) scale(1);
+}
+.zindex--3{
+	z-index: 1000;
+}
+
+
+/* Animation 4-5 */
+.main--4{
+	background: #E5E5E5;
+}
+.container--img{
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 10px;
+}
+.container--img--1{
+	left: 10px;
+}
+.container--img--2{
+	left: 70px;
+}
+.container--img img{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	margin-bottom: 20px;
+	-webkit-transform-origin: 25px 27px;
+	-webkit-transition: all .5s ease-out;
+}
+.vide--active--1{
+	-webkit-transform: rotate(72deg);
+	opacity: 0;
+}
+.plein--active--1{
+	-webkit-transform: rotate(72deg);
+}
+
+
+.plein--2, .vide--2{
+	-webkit-transform: scale(1);
+}
+.etoile--active--2{
+	-webkit-transform: scale(0);
+}
+
+
+
+
+
+
+
+
+
+
